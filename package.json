@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm dist/bundle.js",
     "build": "parcel build public/index.html --out-dir build --no-source-maps",
-    "start": "node src/server.js",
-    "frontend": "parcel public/index.html",
-    "server": "nodemon src/server.js"
+    "dev": "node src/server.js & parcel public/index.html",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",

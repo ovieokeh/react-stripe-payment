@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   CardNumberElement,
   CardExpiryElement,
@@ -13,7 +14,10 @@ function processPayment(details) {
 }
 
 const CheckoutForm = ({ selectedProduct, stripe, history }) => {
-  if (selectedProduct === null) return history.push('/')
+  if (selectedProduct === null) history.push('/')
+  const [receiptUrl, setReceiptUrl] = React.useState('')
+
+  React.useEffect(() => {}, [])
 
   const handleSubmit = async event => {
     event.preventDefault()
@@ -28,7 +32,17 @@ const CheckoutForm = ({ selectedProduct, stripe, history }) => {
       receipt_email: 'customer@example.com'
     })
 
-    window.location = order.data.charge.receipt_url
+    setReceiptUrl(order.data.charge.receipt_url)
+  }
+
+  if (receiptUrl) {
+    return (
+      <div className="success">
+        <h2>Payment Successful!</h2>
+        <a href={receiptUrl}>View Receipt</a>
+        <Link to="/">Home</Link>
+      </div>
+    )
   }
 
   return (

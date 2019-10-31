@@ -1,3 +1,15 @@
+.success {
+  text-align: center;
+
+  h2 {
+    color: seagreen;
+  }
+
+  a {
+    display: block;
+  }
+}
+
 .checkout-form {
   width: 400px;
   padding: 2em;
@@ -61,12 +73,23 @@
     transition: opacity 200ms;
     cursor: pointer;
 
+    &.success {
+      background-color: seagreen;
+      border-color: seagreen;
+    }
+
     &:hover {
       opacity: 0.8;
     }
     &:disabled {
-      opacity: 0.8;
+      opacity: 0.5;
       cursor: not-allowed;
     }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
   }
 }

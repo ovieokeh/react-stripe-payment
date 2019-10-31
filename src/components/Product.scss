@@ -1,0 +1,56 @@
+body,
+html,
+#root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+  // background-color: rgba(0, 0, 0, 0.15);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'desc image';
+  align-items: center;
+  padding: 5%;
+  margin: 2em auto;
+  width: 70%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+  section {
+    p {
+      line-height: 28px;
+    }
+    button {
+      border-style: none;
+      background-color: bisque;
+      color: #444;
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #efbe23;
+      }
+    }
+  }
+
+  img {
+    grid-area: image;
+    justify-self: end;
+    width: auto;
+    height: 200px;
+  }
+}

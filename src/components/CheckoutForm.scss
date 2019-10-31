@@ -1,0 +1,72 @@
+.checkout-form {
+  width: 400px;
+  padding: 2em;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+  p {
+    text-align: center;
+  }
+
+  label {
+    min-width: 500px;
+    color: #6b7c93;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+  }
+
+  input,
+  .StripeElement {
+    display: block;
+    margin: 10px 0 20px 0;
+    padding: 10px 14px;
+    font-size: 1em;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px,
+      rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    background: white;
+
+    &::placeholder {
+      color: #aab7c4;
+    }
+
+    &:focus,
+    .StripeElement--focus {
+      box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+        rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease;
+    }
+  }
+
+  .order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-top: 5%;
+    background-color: #008cdd;
+    border: 1px solid #008cdd;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    width: 200px;
+    transition: opacity 200ms;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:disabled {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "react-stripe-payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build": "parcel build public/index.html --out-dir build --no-source-maps",
+    "start": "node src/server.js",
+    "frontend": "parcel public/index.html",
+    "server": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovieokeh/react-stripe-payment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovieokeh/react-stripe-payment/issues"
+  },
+  "homepage": "https://github.com/ovieokeh/react-stripe-payment#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "history": "^4.10.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-stripe-elements": "^5.1.0",
+    "stripe": "^7.10.0"
+  },
+  "devDependencies": {
+    "sass": "^1.23.2"
+  }
+}

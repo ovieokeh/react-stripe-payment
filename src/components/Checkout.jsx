@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StripeProvider, Elements } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm'
 
 const Checkout = ({ selectedProduct, history }) => {
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
-    <StripeProvider apiKey="pk_test_UrBUzJWPNse3I03Bsaxh6WFX00r6rJ1YCq">
+    <StripeProvider apiKey="pk_test_qLJ11MAZObOKOZOjrowA1NUn00StmA774f">
       <Elements>
         <CheckoutForm selectedProduct={selectedProduct} history={history} />
       </Elements>

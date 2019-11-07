@@ -1,5 +1,5 @@
 import React from 'react'
-import './Product.scss'
+import './Products.scss'
 
 const Products = ({ products, selectProduct, history }) => {
   const handlePurchase = prod => () => {

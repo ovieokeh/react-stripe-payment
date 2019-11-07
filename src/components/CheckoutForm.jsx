@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   CardNumberElement,
@@ -9,15 +9,13 @@ import {
 import axios from 'axios'
 import './CheckoutForm.scss'
 
-function processPayment(details) {
-  return axios.post('http://localhost:7000/api/stripe/charge', details)
-}
-
 const CheckoutForm = ({ selectedProduct, stripe, history }) => {
-  if (selectedProduct === null) history.push('/')
-  const [receiptUrl, setReceiptUrl] = React.useState('')
+  if (selectedProduct === null) {
+    history.push('/')
+    return null
+  }
 
-  React.useEffect(() => {}, [])
+  const [receiptUrl, setReceiptUrl] = useState('')
 
   const handleSubmit = async event => {
     event.preventDefault()
@@ -26,7 +24,7 @@ const CheckoutForm = ({ selectedProduct, stripe, history }) => {
       name: 'customer name'
     })
 
-    const order = await processPayment({
+    const order = await axios.post('http://localhost:7000/api/stripe/charge', {
       amount: selectedProduct.price.toString().replace('.', ''),
       source: token.id,
       receipt_email: 'customer@example.com'

@@ -1,5 +1,4 @@
-const apiKey = 'sk_test_o3LjmFR2Bmzlm2cABKE1ooCP00avr3WJSW'
-const stripe = require('stripe')(apiKey)
+const stripe = require('stripe')('sk_test_T0a4kiCJInFB1DjREcCAcg9l00GOHeag5g')
 
 async function postCharge(req, res) {
   try {

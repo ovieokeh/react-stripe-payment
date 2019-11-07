@@ -22,7 +22,6 @@ app.use((_, res, next) => {
   next()
 })
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/api', router)
 app.use(express.static(path.join(__dirname, '../build')))
 
@@ -31,5 +30,3 @@ app.get('*', (_, res) => {
 })
 
 app.listen(port, () => console.log(`server running on port ${port}`))
-
-module.exports = app

@@ -12,7 +12,7 @@ export const products = [
   {
     name: 'Chilli Sauce',
     desc: `This Chilli Sauce goes well with some nice roast rubber duck. Flavoured with
-    the best spices and the hottest chillis, you can be rest assured of a tasty sunday
+    the best spices and the hottest chillis, you can rest assured of a tasty Sunday
     rubber roast.`,
     price: 12.99,
     img:
